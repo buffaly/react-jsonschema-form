@@ -17,7 +17,8 @@
     "preversion": "npm run build:playground && npm run dist && npm run build:readme && npm run cs-check && npm run lint",
     "start": "node devServer.js",
     "tdd": "cross-env NODE_ENV=test mocha --compilers js:babel-register --watch --require ./test/setup-jsdom.js test/**/*_test.js",
-    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ./test/setup-jsdom.js test/**/*_test.js"
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ./test/setup-jsdom.js test/**/*_test.js",
+    "install": "npm run dist"
   },
   "prettierOptions": "--jsx-bracket-same-line --trailing-comma es5 --semi --tab-width 2",
   "lint-staged": {
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "atob": "^2.0.3",
+    "ajv-i18n": "https://github.com/buffaly/ajv-i18n.git",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.2.3",
