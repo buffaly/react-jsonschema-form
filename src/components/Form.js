@@ -80,7 +80,7 @@ export default class Form extends Component {
       resolvedSchema,
       validate,
       transformErrors,
-      localization,
+      localization
     );
   }
 
@@ -265,7 +265,7 @@ if (process.env.NODE_ENV !== "production") {
     noHtml5Validate: PropTypes.bool,
     liveValidate: PropTypes.bool,
     localization: PropTypes.string,
-    validate: PropTypes.fPropTypesunc,
+    // validate: PropTypes.fPropTypesunc,
     transformErrors: PropTypes.func,
     safeRenderCompletion: PropTypes.bool,
     formContext: PropTypes.object,
