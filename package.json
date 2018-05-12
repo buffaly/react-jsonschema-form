@@ -9,7 +9,7 @@
     "build:playground": "rimraf build && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --optimize-minimize && cp playground/index.prod.html build/index.html",
     "cs-check": "prettier -l $npm_package_prettierOptions '{playground,src,test}/**/*.js'",
     "cs-format": "prettier --jsx-bracket-same-line --trailing-comma es5 --use-tabs false --semi --tab-width 2 '{playground,src,test}/**/*.js' --write",
-    "dist": "npm run build:lib && npm run build:dist",
+    "dist": "yarn run build:lib && yarn run build:dist",
     "lint": "eslint src test playground",
     "precommit": "lint-staged",
     "publish-to-gh-pages": "npm run build:playground && gh-pages --dist build/",
@@ -18,7 +18,7 @@
     "start": "node devServer.js",
     "tdd": "cross-env NODE_ENV=test mocha --compilers js:babel-register --watch --require ./test/setup-jsdom.js test/**/*_test.js",
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ./test/setup-jsdom.js test/**/*_test.js",
-    "install": "npm run dist"
+    "install": "yarn run dist"
   },
   "prettierOptions": "--jsx-bracket-same-line --trailing-comma es5 --semi --tab-width 2",
   "lint-staged": {
